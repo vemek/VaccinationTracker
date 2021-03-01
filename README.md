@@ -6,3 +6,6 @@ Status bar app for macOS that displays per-country progress of the COVID-19 vacc
 
 The app will show the projected percentage of the population of a given country who has received at least one dose of any vaccine. This is based on the last known figure reported for that country, combined with a smoothed average number of vaccinations administered daily to provide an estimate on the up-to-date percentage. The context menu for the app lets you change which country is reported, as well as shows you some more figures (both projected and official).
 The estimate is updated every 5 minutes based on the most recent projection. The data is refreshed from the OWID repo every hour.
+
+## Installation
+Grab [the latest version from the Releases page](https://github.com/vemek/VaccinationTracker/releases). Open it, then drag the app into your Applications folder.
