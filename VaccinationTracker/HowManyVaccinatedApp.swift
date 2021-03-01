@@ -97,6 +97,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         countryMenuItem.submenu = createCountryMenu()
         statusBarMenu.addItem(countryMenuItem)
         
+        let quitMenuItem = NSMenuItem(
+            title: "Quit",
+            action: #selector(quit),
+            keyEquivalent: "Q"
+        )
+        statusBarMenu.addItem(quitMenuItem)
+        
         statusBarItem?.button?.title = "\(vaccinationsData.percentageVaccinated(estimate: estimateLiveNumbers))"
         statusBarItem?.menu = statusBarMenu
     }
@@ -124,5 +131,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         formatter.numberStyle = NumberFormatter.Style.decimal
         formatter.usesGroupingSeparator = true
         return formatter
+    }
+    
+    @objc func quit() {
+        NSApplication.shared.terminate(self)
     }
 }
